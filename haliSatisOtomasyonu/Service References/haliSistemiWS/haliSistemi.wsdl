@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="kullaniciGiris">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kullaniciAdi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kullaniciKodu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kullaniciSifre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="kullaniciGirisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kullaniciGirisResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="urunAra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="urunAdi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="urunAraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="urunAraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="satisListe">
+        <s:complexType />
+      </s:element>
+      <s:element name="satisListeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="satisListeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="barcodeBilgisi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="barcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="barcodeBilgisiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="barcodeBilgisiResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="musteriCek">
+        <s:complexType />
+      </s:element>
+      <s:element name="musteriCekResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="musteriCekResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="musteriAdiAra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="musteriAdi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="musteriAdiAraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="musteriAdiAraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="musteriEkle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="musteriAdSoyad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adres1Ulke" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adres1Sehir" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adres1Ilce" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adres1Semt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adres1PostaKodu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adres2Ulke" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adres2Sehir" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adres2Ilce" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adres2Semt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adres2PostaKodu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="musteriTel1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="musteriTel2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TCKimlikVergiNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vergiDairesi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="musteriEkleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="musteriEkleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="stoklardaBarkodAra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="barcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="stoklardaBarkodAraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stoklardaBarkodAraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="stoklardaUrunAdiAra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="urunAdi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="stoklardaUrunAdiAraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stoklardaUrunAdiAraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="subeStokListele">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subeAdi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="subeStokListeleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subeStokListeleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="stokHareketiAra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="barcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="stokHareketiAraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stokHareketiAraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="faturaAra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="faturaKodu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="faturaAraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="faturaAraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ayrintiliFaturaAra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="faturaKodu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ayrintiliFaturaAraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ayrintiliFaturaAraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="siparisEkle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="urunBarkodu" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="siparisAdeti" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="subeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="siparisEkleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siparisEkleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="siparisListele">
+        <s:complexType />
+      </s:element>
+      <s:element name="siparisListeleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siparisListeleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="satisYap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="urunBarkodu" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="musteriID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="subeID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="urunMiktari" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="satisYapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="satisYapResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="faturaGoster">
+        <s:complexType />
+      </s:element>
+      <s:element name="faturaGosterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="faturaGosterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="kullaniciGirisSoapIn">
+    <wsdl:part name="parameters" element="tns:kullaniciGiris" />
+  </wsdl:message>
+  <wsdl:message name="kullaniciGirisSoapOut">
+    <wsdl:part name="parameters" element="tns:kullaniciGirisResponse" />
+  </wsdl:message>
+  <wsdl:message name="urunAraSoapIn">
+    <wsdl:part name="parameters" element="tns:urunAra" />
+  </wsdl:message>
+  <wsdl:message name="urunAraSoapOut">
+    <wsdl:part name="parameters" element="tns:urunAraResponse" />
+  </wsdl:message>
+  <wsdl:message name="satisListeSoapIn">
+    <wsdl:part name="parameters" element="tns:satisListe" />
+  </wsdl:message>
+  <wsdl:message name="satisListeSoapOut">
+    <wsdl:part name="parameters" element="tns:satisListeResponse" />
+  </wsdl:message>
+  <wsdl:message name="barcodeBilgisiSoapIn">
+    <wsdl:part name="parameters" element="tns:barcodeBilgisi" />
+  </wsdl:message>
+  <wsdl:message name="barcodeBilgisiSoapOut">
+    <wsdl:part name="parameters" element="tns:barcodeBilgisiResponse" />
+  </wsdl:message>
+  <wsdl:message name="musteriCekSoapIn">
+    <wsdl:part name="parameters" element="tns:musteriCek" />
+  </wsdl:message>
+  <wsdl:message name="musteriCekSoapOut">
+    <wsdl:part name="parameters" element="tns:musteriCekResponse" />
+  </wsdl:message>
+  <wsdl:message name="musteriAdiAraSoapIn">
+    <wsdl:part name="parameters" element="tns:musteriAdiAra" />
+  </wsdl:message>
+  <wsdl:message name="musteriAdiAraSoapOut">
+    <wsdl:part name="parameters" element="tns:musteriAdiAraResponse" />
+  </wsdl:message>
+  <wsdl:message name="musteriEkleSoapIn">
+    <wsdl:part name="parameters" element="tns:musteriEkle" />
+  </wsdl:message>
+  <wsdl:message name="musteriEkleSoapOut">
+    <wsdl:part name="parameters" element="tns:musteriEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="stoklardaBarkodAraSoapIn">
+    <wsdl:part name="parameters" element="tns:stoklardaBarkodAra" />
+  </wsdl:message>
+  <wsdl:message name="stoklardaBarkodAraSoapOut">
+    <wsdl:part name="parameters" element="tns:stoklardaBarkodAraResponse" />
+  </wsdl:message>
+  <wsdl:message name="stoklardaUrunAdiAraSoapIn">
+    <wsdl:part name="parameters" element="tns:stoklardaUrunAdiAra" />
+  </wsdl:message>
+  <wsdl:message name="stoklardaUrunAdiAraSoapOut">
+    <wsdl:part name="parameters" element="tns:stoklardaUrunAdiAraResponse" />
+  </wsdl:message>
+  <wsdl:message name="subeStokListeleSoapIn">
+    <wsdl:part name="parameters" element="tns:subeStokListele" />
+  </wsdl:message>
+  <wsdl:message name="subeStokListeleSoapOut">
+    <wsdl:part name="parameters" element="tns:subeStokListeleResponse" />
+  </wsdl:message>
+  <wsdl:message name="stokHareketiAraSoapIn">
+    <wsdl:part name="parameters" element="tns:stokHareketiAra" />
+  </wsdl:message>
+  <wsdl:message name="stokHareketiAraSoapOut">
+    <wsdl:part name="parameters" element="tns:stokHareketiAraResponse" />
+  </wsdl:message>
+  <wsdl:message name="faturaAraSoapIn">
+    <wsdl:part name="parameters" element="tns:faturaAra" />
+  </wsdl:message>
+  <wsdl:message name="faturaAraSoapOut">
+    <wsdl:part name="parameters" element="tns:faturaAraResponse" />
+  </wsdl:message>
+  <wsdl:message name="ayrintiliFaturaAraSoapIn">
+    <wsdl:part name="parameters" element="tns:ayrintiliFaturaAra" />
+  </wsdl:message>
+  <wsdl:message name="ayrintiliFaturaAraSoapOut">
+    <wsdl:part name="parameters" element="tns:ayrintiliFaturaAraResponse" />
+  </wsdl:message>
+  <wsdl:message name="siparisEkleSoapIn">
+    <wsdl:part name="parameters" element="tns:siparisEkle" />
+  </wsdl:message>
+  <wsdl:message name="siparisEkleSoapOut">
+    <wsdl:part name="parameters" element="tns:siparisEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="siparisListeleSoapIn">
+    <wsdl:part name="parameters" element="tns:siparisListele" />
+  </wsdl:message>
+  <wsdl:message name="siparisListeleSoapOut">
+    <wsdl:part name="parameters" element="tns:siparisListeleResponse" />
+  </wsdl:message>
+  <wsdl:message name="satisYapSoapIn">
+    <wsdl:part name="parameters" element="tns:satisYap" />
+  </wsdl:message>
+  <wsdl:message name="satisYapSoapOut">
+    <wsdl:part name="parameters" element="tns:satisYapResponse" />
+  </wsdl:message>
+  <wsdl:message name="faturaGosterSoapIn">
+    <wsdl:part name="parameters" element="tns:faturaGoster" />
+  </wsdl:message>
+  <wsdl:message name="faturaGosterSoapOut">
+    <wsdl:part name="parameters" element="tns:faturaGosterResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="kullaniciGiris">
+      <wsdl:input message="tns:kullaniciGirisSoapIn" />
+      <wsdl:output message="tns:kullaniciGirisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="urunAra">
+      <wsdl:input message="tns:urunAraSoapIn" />
+      <wsdl:output message="tns:urunAraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="satisListe">
+      <wsdl:input message="tns:satisListeSoapIn" />
+      <wsdl:output message="tns:satisListeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="barcodeBilgisi">
+      <wsdl:input message="tns:barcodeBilgisiSoapIn" />
+      <wsdl:output message="tns:barcodeBilgisiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="musteriCek">
+      <wsdl:input message="tns:musteriCekSoapIn" />
+      <wsdl:output message="tns:musteriCekSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="musteriAdiAra">
+      <wsdl:input message="tns:musteriAdiAraSoapIn" />
+      <wsdl:output message="tns:musteriAdiAraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="musteriEkle">
+      <wsdl:input message="tns:musteriEkleSoapIn" />
+      <wsdl:output message="tns:musteriEkleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="stoklardaBarkodAra">
+      <wsdl:input message="tns:stoklardaBarkodAraSoapIn" />
+      <wsdl:output message="tns:stoklardaBarkodAraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="stoklardaUrunAdiAra">
+      <wsdl:input message="tns:stoklardaUrunAdiAraSoapIn" />
+      <wsdl:output message="tns:stoklardaUrunAdiAraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="subeStokListele">
+      <wsdl:input message="tns:subeStokListeleSoapIn" />
+      <wsdl:output message="tns:subeStokListeleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="stokHareketiAra">
+      <wsdl:input message="tns:stokHareketiAraSoapIn" />
+      <wsdl:output message="tns:stokHareketiAraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="faturaAra">
+      <wsdl:input message="tns:faturaAraSoapIn" />
+      <wsdl:output message="tns:faturaAraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ayrintiliFaturaAra">
+      <wsdl:input message="tns:ayrintiliFaturaAraSoapIn" />
+      <wsdl:output message="tns:ayrintiliFaturaAraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="siparisEkle">
+      <wsdl:input message="tns:siparisEkleSoapIn" />
+      <wsdl:output message="tns:siparisEkleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="siparisListele">
+      <wsdl:input message="tns:siparisListeleSoapIn" />
+      <wsdl:output message="tns:siparisListeleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="satisYap">
+      <wsdl:input message="tns:satisYapSoapIn" />
+      <wsdl:output message="tns:satisYapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="faturaGoster">
+      <wsdl:input message="tns:faturaGosterSoapIn" />
+      <wsdl:output message="tns:faturaGosterSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="kullaniciGiris">
+      <soap:operation soapAction="http://tempuri.org/kullaniciGiris" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="urunAra">
+      <soap:operation soapAction="http://tempuri.org/urunAra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="satisListe">
+      <soap:operation soapAction="http://tempuri.org/satisListe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="barcodeBilgisi">
+      <soap:operation soapAction="http://tempuri.org/barcodeBilgisi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="musteriCek">
+      <soap:operation soapAction="http://tempuri.org/musteriCek" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="musteriAdiAra">
+      <soap:operation soapAction="http://tempuri.org/musteriAdiAra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="musteriEkle">
+      <soap:operation soapAction="http://tempuri.org/musteriEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stoklardaBarkodAra">
+      <soap:operation soapAction="http://tempuri.org/stoklardaBarkodAra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stoklardaUrunAdiAra">
+      <soap:operation soapAction="http://tempuri.org/stoklardaUrunAdiAra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subeStokListele">
+      <soap:operation soapAction="http://tempuri.org/subeStokListele" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stokHareketiAra">
+      <soap:operation soapAction="http://tempuri.org/stokHareketiAra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="faturaAra">
+      <soap:operation soapAction="http://tempuri.org/faturaAra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ayrintiliFaturaAra">
+      <soap:operation soapAction="http://tempuri.org/ayrintiliFaturaAra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="siparisEkle">
+      <soap:operation soapAction="http://tempuri.org/siparisEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="siparisListele">
+      <soap:operation soapAction="http://tempuri.org/siparisListele" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="satisYap">
+      <soap:operation soapAction="http://tempuri.org/satisYap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="faturaGoster">
+      <soap:operation soapAction="http://tempuri.org/faturaGoster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="kullaniciGiris">
+      <soap12:operation soapAction="http://tempuri.org/kullaniciGiris" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="urunAra">
+      <soap12:operation soapAction="http://tempuri.org/urunAra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="satisListe">
+      <soap12:operation soapAction="http://tempuri.org/satisListe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="barcodeBilgisi">
+      <soap12:operation soapAction="http://tempuri.org/barcodeBilgisi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="musteriCek">
+      <soap12:operation soapAction="http://tempuri.org/musteriCek" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="musteriAdiAra">
+      <soap12:operation soapAction="http://tempuri.org/musteriAdiAra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="musteriEkle">
+      <soap12:operation soapAction="http://tempuri.org/musteriEkle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stoklardaBarkodAra">
+      <soap12:operation soapAction="http://tempuri.org/stoklardaBarkodAra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stoklardaUrunAdiAra">
+      <soap12:operation soapAction="http://tempuri.org/stoklardaUrunAdiAra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subeStokListele">
+      <soap12:operation soapAction="http://tempuri.org/subeStokListele" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stokHareketiAra">
+      <soap12:operation soapAction="http://tempuri.org/stokHareketiAra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="faturaAra">
+      <soap12:operation soapAction="http://tempuri.org/faturaAra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ayrintiliFaturaAra">
+      <soap12:operation soapAction="http://tempuri.org/ayrintiliFaturaAra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="siparisEkle">
+      <soap12:operation soapAction="http://tempuri.org/siparisEkle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="siparisListele">
+      <soap12:operation soapAction="http://tempuri.org/siparisListele" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="satisYap">
+      <soap12:operation soapAction="http://tempuri.org/satisYap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="faturaGoster">
+      <soap12:operation soapAction="http://tempuri.org/faturaGoster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://localhost:57529/haliSistemi.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://localhost:57529/haliSistemi.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

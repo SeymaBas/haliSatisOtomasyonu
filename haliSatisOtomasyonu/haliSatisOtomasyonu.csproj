@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF554BF7-34C9-4D24-9630-6FD878DE6FAD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>haliSatisOtomasyonu</RootNamespace>
+    <AssemblyName>haliSatisOtomasyonu</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v15.1.UI, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Win.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1.UI, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.1.Extensions, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.1.Wizard, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="islemler\FormBarkod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islemler\FormBarkod.Designer.cs">
+      <DependentUpon>FormBarkod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islemler\FormBarkodRezerve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islemler\FormBarkodRezerve.Designer.cs">
+      <DependentUpon>FormBarkodRezerve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islemler\FormCariHesap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islemler\FormCariHesap.Designer.cs">
+      <DependentUpon>FormCariHesap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islemler\FormFaturaBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islemler\FormFaturaBilgileri.Designer.cs">
+      <DependentUpon>FormFaturaBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islemler\FormFaturaGoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islemler\FormFaturaGoster.Designer.cs">
+      <DependentUpon>FormFaturaGoster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islemler\FormGunSonu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islemler\FormGunSonu.Designer.cs">
+      <DependentUpon>FormGunSonu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMalKabul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMalKabul.Designer.cs">
+      <DependentUpon>FormMalKabul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islemler\FormSatisListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islemler\FormSatisListesi.Designer.cs">
+      <DependentUpon>FormSatisListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islemler\FormUrunIade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islemler\FormUrunIade.Designer.cs">
+      <DependentUpon>FormUrunIade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islemler\FormUrunSat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islemler\FormUrunSat.Designer.cs">
+      <DependentUpon>FormUrunSat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kasa\KasaAcilisKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kasa\KasaAcilisKarti.Designer.cs">
+      <DependentUpon>KasaAcilisKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kasa\KasaDevirIslemKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kasa\KasaDevirIslemKarti.Designer.cs">
+      <DependentUpon>KasaDevirIslemKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kasa\KasaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kasa\KasaListesi.Designer.cs">
+      <DependentUpon>KasaListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kasa\KasaTahsilatOdeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kasa\KasaTahsilatOdeme.Designer.cs">
+      <DependentUpon>KasaTahsilatOdeme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="musteriler\FormCariAcilisKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="musteriler\FormCariAcilisKarti.Designer.cs">
+      <DependentUpon>FormCariAcilisKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="musteriler\FormCariHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="musteriler\FormCariHareketleri.Designer.cs">
+      <DependentUpon>FormCariHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="musteriler\FormCariListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="musteriler\FormCariListesi.Designer.cs">
+      <DependentUpon>FormCariListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raporlar\FormAraAmbardaBekleyenler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raporlar\FormAraAmbardaBekleyenler.Designer.cs">
+      <DependentUpon>FormAraAmbardaBekleyenler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raporlar\FormHizliArama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raporlar\FormHizliArama.Designer.cs">
+      <DependentUpon>FormHizliArama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raporlar\formStokOzeti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raporlar\formStokOzeti.Designer.cs">
+      <DependentUpon>formStokOzeti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islemler\FormTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islemler\FormTransfer.Designer.cs">
+      <DependentUpon>FormTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islemler\FormUrunSatisSihirbazi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islemler\FormUrunSatisSihirbazi.Designer.cs">
+      <DependentUpon>FormUrunSatisSihirbazi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\haliSistemiWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="siparisler\FormSiparisEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="siparisler\FormSiparisEkle.Designer.cs">
+      <DependentUpon>FormSiparisEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="siparisler\FormSiparisleriListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="siparisler\FormSiparisleriListele.Designer.cs">
+      <DependentUpon>FormSiparisleriListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stok\FormStokHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stok\FormStokHareketleri.Designer.cs">
+      <DependentUpon>FormStokHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stok\FormStokListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stok\FormStokListesi.Designer.cs">
+      <DependentUpon>FormStokListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stok\FormStokAra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stok\FormStokAra.Designer.cs">
+      <DependentUpon>FormStokAra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitFormLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitFormLoading.Designer.cs">
+      <DependentUpon>WaitFormLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="YaziciIslemleri.cs" />
+    <EmbeddedResource Include="islemler\FormBarkod.resx">
+      <DependentUpon>FormBarkod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="islemler\FormCariHesap.resx">
+      <DependentUpon>FormCariHesap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="islemler\FormFaturaBilgileri.resx">
+      <DependentUpon>FormFaturaBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="islemler\FormFaturaGoster.resx">
+      <DependentUpon>FormFaturaGoster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="islemler\FormSatisListesi.resx">
+      <DependentUpon>FormSatisListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="islemler\FormUrunSat.resx">
+      <DependentUpon>FormUrunSat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="musteriler\FormCariHareketleri.resx">
+      <DependentUpon>FormCariHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="musteriler\FormCariListesi.resx">
+      <DependentUpon>FormCariListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="raporlar\formStokOzeti.resx">
+      <DependentUpon>formStokOzeti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="islemler\FormTransfer.resx">
+      <DependentUpon>FormTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="islemler\FormUrunSatisSihirbazi.resx">
+      <DependentUpon>FormUrunSatisSihirbazi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="siparisler\FormSiparisEkle.resx">
+      <DependentUpon>FormSiparisEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="siparisler\FormSiparisleriListele.resx">
+      <DependentUpon>FormSiparisleriListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stok\FormStokHareketleri.resx">
+      <DependentUpon>FormStokHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stok\FormStokListesi.resx">
+      <DependentUpon>FormStokListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stok\FormStokAra.resx">
+      <DependentUpon>FormStokAra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitFormLoading.resx">
+      <DependentUpon>WaitFormLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRDesignRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XRDesignRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\formStokOzeti.datasource" />
+    <None Include="Properties\DataSources\FormTransfer.datasource" />
+    <None Include="Properties\DataSources\FormUrunSatisSihirbazi.datasource" />
+    <None Include="Properties\DataSources\haliSatisOtomasyonu.haliSistemiWS.Service1Soap.datasource" />
+    <None Include="Properties\DataSources\haliSatisOtomasyonu.haliSistemiWS.Service1SoapChannel.datasource" />
+    <None Include="Properties\DataSources\haliSatisOtomasyonu.haliSistemiWS.Service1SoapClient.datasource" />
+    <None Include="Properties\DataSources\haliSatisOtomasyonu.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\haliSatisOtomasyonu.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\haliSatisOtomasyonu.SRSatisListesi.Service1Soap.datasource" />
+    <None Include="Properties\DataSources\haliSatisOtomasyonu.SRSatisListesi.Service1SoapChannel.datasource" />
+    <None Include="Properties\DataSources\haliSatisOtomasyonu.SRSatisListesi.Service1SoapClient.datasource" />
+    <None Include="Properties\DataSources\login.datasource" />
+    <None Include="Properties\DataSources\MainPage.datasource" />
+    <None Include="Properties\DataSources\PrintRibbonControllerResources.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\WaitFormLoading.datasource" />
+    <None Include="Properties\DataSources\WaitFormLoading.WaitFormCommand.datasource" />
+    <None Include="Properties\DataSources\XRDesignRibbonControllerResources.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\haliSistemiWS\haliSistemi.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\haliSistemiWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\haliSistemiWS\haliSistemi.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\haliSistemiWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\haliSistemiWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\haliSistemiWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
